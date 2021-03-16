@@ -4,7 +4,7 @@ import json
 
 def mapping(text):
     location = text[1:]
-    url = "http://www.mapquestapi.com/geocoding/v1/address"
+    url = "http://www.mapquestapi.com/geocoding/v1/address`?"
     key = "CVHxRa9OD4bZHjgeEpsq51fXfX9YVQQX"
     url_map = url + urllib.parse.urlencode({"key":key, "location":location})
     json_data = requests.get(url_map).json()
@@ -15,7 +15,7 @@ def mapping(text):
 def iss(location):
     lat = location[0]
     lon = location[1]
-    url = "http://api.open-notify.org/iss-pass.json"
+    url = "http://api.open-notify.org/iss-pass.json?"
     url_iss = url + urllib.parse.urlencode({"lat":lat, "lon":lon})
     json_data = requests.get(url_iss).json()
     duration = json_data["response"][0]["duration"]
