@@ -5,8 +5,6 @@ import urllib.request
 def return_currency(country):
     url = "https://restcountries.eu/rest/v2/name/{}".format(country)
     response = requests.get(url)
-    if response.status_code != 200:
-        raise ApiError('GET /tasks/ {}'.format(response.status_code))
     resp = response.json()[0]["currencies"][0]["code"]
     return resp
 

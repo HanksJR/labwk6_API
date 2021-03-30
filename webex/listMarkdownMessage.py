@@ -1,5 +1,5 @@
 import requests
-import webex.mapquest as maps
+import mapquest as maps
 
 def get_message(id, headers):
     url = "https://webexapis.com/v1/messages"
