@@ -1,5 +1,5 @@
-import webex.listsRooms as room
-import webex.listMarkdownMessage as mark
+import listsRooms as room
+import listMarkdownMessage as mark
 
 if __name__ == "__main__":
     
