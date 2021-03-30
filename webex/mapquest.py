@@ -4,7 +4,7 @@ import json
 
 def mapping(text):
     location = text[1:]
-    url = "http://www.mapquestapi.com/geocoding/v1/address`?"
+    url = "http://www.mapquestapi.com/geocoding/v1/address?"
     key = "CVHxRa9OD4bZHjgeEpsq51fXfX9YVQQX"
     url_map = url + urllib.parse.urlencode({"key":key, "location":location})
     json_data = requests.get(url_map).json()
